@@ -1,0 +1,17 @@
+Column,Recommended SQL Server Data Type,Reason,Check / Evidence
+id,INT NOT NULL PRIMARY KEY,Unique row identifier; numeric whole number.,Example: 1
+uk_air_id,NVARCHAR(20) NOT NULL,UK-AIR site identifier. Stored as text because it contains letters and numbers.,Max length: 8
+eu_site_id,NVARCHAR(50) NOT NULL,EU identifier where available; Not Available kept as text to show missing status.,Max length: 13
+emep_site_id,NVARCHAR(50) NOT NULL,EMEP identifier where available; Not Available kept as text to show missing status.,Max length: 13
+site_name,NVARCHAR(255) NOT NULL,Monitoring site name; text field with place and site labels.,Max length: 41
+environment_type,NVARCHAR(100) NOT NULL,"Site character such as Urban Traffic, Urban Background or Rural Background.",9 distinct values
+zone,NVARCHAR(150) NOT NULL,UK zone or urban area used for geographic grouping.,35 distinct values
+start_date,DATE NOT NULL,Monitoring site start date in yyyy-mm-dd format.,Range: 1961-04-04 to 2022-04-01
+end_date,DATE NOT NULL,Monitoring site end date in yyyy-mm-dd format. In this 500-row sample all records have an end date.,Range: 1975-10-09 to 2025-01-09
+latitude,"DECIMAL(10,6) NOT NULL",Latitude coordinate for mapping; decimal geographic value.,Six decimal places retained
+longitude,"DECIMAL(10,6) NOT NULL",Longitude coordinate for mapping; decimal geographic value.,Six decimal places retained
+northing,"DECIMAL(12,2) NOT NULL",British National Grid northing; numeric coordinate.,Two decimals retained
+easting,"DECIMAL(12,2) NOT NULL",British National Grid easting; numeric coordinate.,Two decimals retained
+altitude_m,"DECIMAL(10,2) NOT NULL",Altitude in metres; numeric decimal used for comparisons and averages.,Two decimals retained
+networks,NVARCHAR(MAX) NOT NULL,"Network names can be long and can contain multiple networks separated by semicolons, so MAX avoids truncation.",Max length: 186
+site_description,NVARCHAR(MAX) NOT NULL,"Long site description text can exceed normal short text sizes, so MAX avoids SQL Server truncation.",Max length: 500

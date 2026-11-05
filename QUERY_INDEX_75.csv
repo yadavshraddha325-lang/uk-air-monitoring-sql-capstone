@@ -1,0 +1,76 @@
+qno,perspective,difficulty,concept,question,SQL_File
+1,Geographic Coverage,Easy,Basic SELECT,"List the first 20 monitoring sites with their zone, latitude, and longitude.",Q01.sql
+2,Geographic Coverage,Easy,Basic WHERE,Which sites are located in the South East zone?,Q02.sql
+3,Geographic Coverage,Easy,DISTINCT / ORDER BY,Which unique UK zones are present in the 500-row dataset?,Q03.sql
+4,Geographic Coverage,Easy,Basic WHERE,Which sites have valid latitude and longitude values?,Q04.sql
+5,Geographic Coverage,Easy,Basic WHERE,Which sites have altitude above 100 metres?,Q05.sql
+6,Geographic Coverage,Medium,GROUP BY / Aggregation,How many monitoring sites are there in each zone?,Q06.sql
+7,Geographic Coverage,Medium,GROUP BY / Aggregation,What is the average altitude of monitoring sites in each zone?,Q07.sql
+8,Geographic Coverage,Medium,GROUP BY / HAVING,Which zones have at least 10 monitoring sites?,Q08.sql
+9,Geographic Coverage,Medium,GROUP BY / CASE,How many mapped and unmapped sites exist in each zone?,Q09.sql
+10,Geographic Coverage,Medium,GROUP BY / Aggregation,Which zone and environment type combinations have the most sites?,Q10.sql
+11,Geographic Coverage,Difficult,Window Function,Rank zones by total number of monitoring sites.,Q11.sql
+12,Geographic Coverage,Difficult,Window Function,Show each zone count and its percentage of all monitoring sites.,Q12.sql
+13,Geographic Coverage,Difficult,CTE,Use a CTE to identify zones with below-average site coverage.,Q13.sql
+14,Geographic Coverage,Difficult,VIEW,Use the zone summary view to review overall geographic coverage.,Q14.sql
+15,Geographic Coverage,Difficult,Window Function,Find the northernmost monitoring site in each zone using row numbering.,Q15.sql
+16,Environment Type and Site Character,Easy,Basic WHERE,List sites classified as Urban Traffic.,Q16.sql
+17,Environment Type and Site Character,Easy,Basic WHERE,List sites classified as Rural Background.,Q17.sql
+18,Environment Type and Site Character,Easy,DISTINCT / ORDER BY,Show all distinct environment types in the dataset.,Q18.sql
+19,Environment Type and Site Character,Easy,LIKE Filter,Find site names containing the word London.,Q19.sql
+20,Environment Type and Site Character,Easy,LIKE Filter,Which sites are classified as a background environment type?,Q20.sql
+21,Environment Type and Site Character,Medium,GROUP BY / Aggregation,How many sites exist for each environment type?,Q21.sql
+22,Environment Type and Site Character,Medium,GROUP BY / CASE,How many traffic-related and non-traffic sites exist?,Q22.sql
+23,Environment Type and Site Character,Medium,GROUP BY / Aggregation,What is the average altitude by environment type?,Q23.sql
+24,Environment Type and Site Character,Medium,GROUP BY / HAVING,Which environment types appear in more than one zone?,Q24.sql
+25,Environment Type and Site Character,Medium,GROUP BY / Aggregation,Which environment type and zone combinations have the highest average altitude?,Q25.sql
+26,Environment Type and Site Character,Difficult,Window Function,Rank environment types by total site coverage.,Q26.sql
+27,Environment Type and Site Character,Difficult,CTE,Compare each environment type average altitude against the overall average altitude.,Q27.sql
+28,Environment Type and Site Character,Difficult,VIEW,Use the environment summary view to compare environment types.,Q28.sql
+29,Environment Type and Site Character,Difficult,Window Function,Find the top zone for each environment type.,Q29.sql
+30,Environment Type and Site Character,Difficult,Window Function,Calculate the percentage of all sites represented by each environment type.,Q30.sql
+31,Time and Monitoring Lifecycle,Easy,Basic WHERE,Which sites started before 1980?,Q31.sql
+32,Time and Monitoring Lifecycle,Easy,Basic WHERE,Which sites started in or after 2000?,Q32.sql
+33,Time and Monitoring Lifecycle,Easy,Basic WHERE,Which sites ended before 2000?,Q33.sql
+34,Time and Monitoring Lifecycle,Easy,ORDER BY,Show the 20 earliest monitoring start dates.,Q34.sql
+35,Time and Monitoring Lifecycle,Easy,ORDER BY,Show the 20 latest monitoring end dates.,Q35.sql
+36,Time and Monitoring Lifecycle,Medium,GROUP BY / Aggregation,How many sites started in each year?,Q36.sql
+37,Time and Monitoring Lifecycle,Medium,GROUP BY / Aggregation,How many sites ended in each year?,Q37.sql
+38,Time and Monitoring Lifecycle,Medium,GROUP BY / Aggregation,What are the earliest and latest start dates by zone?,Q38.sql
+39,Time and Monitoring Lifecycle,Medium,GROUP BY / HAVING,Which start years have at least 10 new monitoring sites?,Q39.sql
+40,Time and Monitoring Lifecycle,Medium,Date Calculation / Aggregation,What is the average operational duration for sites in each zone?,Q40.sql
+41,Time and Monitoring Lifecycle,Difficult,CTE,Use a CTE to classify site duration bands and count them by zone.,Q41.sql
+42,Time and Monitoring Lifecycle,Difficult,Window Function,Calculate year-over-year change in sites started.,Q42.sql
+43,Time and Monitoring Lifecycle,Difficult,Window Function,Calculate a running total of monitoring sites started over time.,Q43.sql
+44,Time and Monitoring Lifecycle,Difficult,VIEW / Window Function,Use the lifecycle view to list the longest-operating site in each zone.,Q44.sql
+45,Time and Monitoring Lifecycle,Difficult,Window Function,Rank the top 10 longest-operating monitoring sites.,Q45.sql
+46,"Identifier, Network and Metadata Coverage",Easy,Basic WHERE,Which sites have an EU site ID available?,Q46.sql
+47,"Identifier, Network and Metadata Coverage",Easy,Basic WHERE,Which sites have an EMEP site ID available?,Q47.sql
+48,"Identifier, Network and Metadata Coverage",Easy,Basic WHERE,Which sites have both EU and EMEP identifiers available?,Q48.sql
+49,"Identifier, Network and Metadata Coverage",Easy,LIKE Filter,Which sites belong to networks containing the word Automatic?,Q49.sql
+50,"Identifier, Network and Metadata Coverage",Easy,Basic WHERE,Which sites have a site description available?,Q50.sql
+51,"Identifier, Network and Metadata Coverage",Medium,GROUP BY / CASE,How many records have EU and EMEP identifiers available?,Q51.sql
+52,"Identifier, Network and Metadata Coverage",Medium,GROUP BY / Aggregation,What is the EU identifier availability by zone?,Q52.sql
+53,"Identifier, Network and Metadata Coverage",Medium,GROUP BY / Aggregation,What is the EMEP identifier availability by environment type?,Q53.sql
+54,"Identifier, Network and Metadata Coverage",Medium,GROUP BY / Text Length,What is the average available description length by environment type?,Q54.sql
+55,"Identifier, Network and Metadata Coverage",Medium,GROUP BY / Aggregation,Which network values appear most often?,Q55.sql
+56,"Identifier, Network and Metadata Coverage",Difficult,CTE,Use a CTE to identify weak metadata records by zone.,Q56.sql
+57,"Identifier, Network and Metadata Coverage",Difficult,Window Function,Rank zones by EU identifier coverage rate.,Q57.sql
+58,"Identifier, Network and Metadata Coverage",Difficult,VIEW,Use the identifier quality view to summarize metadata quality bands.,Q58.sql
+59,"Identifier, Network and Metadata Coverage",Difficult,Window Function,List the 10 longest site descriptions with row numbers.,Q59.sql
+60,"Identifier, Network and Metadata Coverage",Difficult,Window Function,Show each network count and its percentage share of the dataset.,Q60.sql
+61,Operational Prioritisation and Data Quality,Easy,Basic WHERE,Which traffic or roadside sites have altitude above the dataset average?,Q61.sql
+62,Operational Prioritisation and Data Quality,Easy,ORDER BY,Which 20 sites are furthest west by longitude?,Q62.sql
+63,Operational Prioritisation and Data Quality,Easy,ORDER BY,Which 20 sites are furthest north by latitude?,Q63.sql
+64,Operational Prioritisation and Data Quality,Easy,LIKE Filter,Which records are part of Automatic monitoring networks?,Q64.sql
+65,Operational Prioritisation and Data Quality,Easy,CASE Expression,Classify sites into simple altitude bands.,Q65.sql
+66,Operational Prioritisation and Data Quality,Medium,GROUP BY / CASE,How many sites fall into each metadata quality band?,Q66.sql
+67,Operational Prioritisation and Data Quality,Medium,GROUP BY / Aggregation,Which zones have the highest average operational duration?,Q67.sql
+68,Operational Prioritisation and Data Quality,Medium,GROUP BY / CASE,What percentage of sites in each zone are traffic or roadside sites?,Q68.sql
+69,Operational Prioritisation and Data Quality,Medium,GROUP BY / HAVING,Which zones have more than 5 sites and an average altitude above 50 metres?,Q69.sql
+70,Operational Prioritisation and Data Quality,Medium,GROUP BY / CASE,Summarize description availability by zone.,Q70.sql
+71,Operational Prioritisation and Data Quality,Difficult,Window Function,Place sites into altitude quartiles using NTILE.,Q71.sql
+72,Operational Prioritisation and Data Quality,Difficult,CTE,"Classify zones as high, medium, or low coverage compared with the dataset average.",Q72.sql
+73,Operational Prioritisation and Data Quality,Difficult,CTE / CASE,Create a data readiness summary combining identifier and description status.,Q73.sql
+74,Operational Prioritisation and Data Quality,Difficult,Window Function,Calculate a 3-year moving average of sites started by year.,Q74.sql
+75,Operational Prioritisation and Data Quality,Difficult,CTE / Window Function,Create a final prioritisation list for traffic or roadside sites with weak or partial metadata.,Q75.sql
